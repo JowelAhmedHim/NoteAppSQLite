@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Activity.AddNotesActivity">
+
+    <EditText
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/rectacgle2"
+        android:hint="Note Title"
+        android:fontFamily="serif"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/black"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#BFB3B3"
+        android:layout_below="@+id/noteTitle"/>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="serif"
+        android:scrollbars="vertical"
+        android:background="@drawable/rectacgle2"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/noteTitle"
+        android:hint="Write your Note "
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+
+</RelativeLayout>
