@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="10dp"
     card_view:cardElevation="5dp"
-     android:layout_margin="10dp"
+    android:layout_margin="10dp"
    >
 
         <RelativeLayout
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/noteTitle"
                 android:text="Note Description"
-                android:textSize="12sp"
+                android:textSize="18sp"
                 android:layout_margin="6dp"
                 android:textColor="@color/black"/>
 

@@ -27,10 +27,6 @@ public class DBManager {
         return this;
     }
 
-    public void close()
-    {
-        databaseHelper.close();
-    }
 
     public long insert(String title,String desc){
 
@@ -38,6 +34,7 @@ public class DBManager {
         contentValues.put(FeedEntry.COLUMN_TITLE,title);
         contentValues.put(FeedEntry.COLUMN_DESCRIPTION,desc);
         long id = database.insert(FeedEntry.TABLE_NAME, null,contentValues);
+        database.close();
         return id;
 
     }
@@ -60,11 +57,13 @@ public class DBManager {
         contentValues.put(FeedEntry.COLUMN_TITLE,name);
         contentValues.put(FeedEntry.COLUMN_DESCRIPTION,desc);
         int result = database.update(FeedEntry.TABLE_NAME,contentValues,"id=?",new String[]{id});
+        database.close();
         return result;
     }
 
     public void delete(String id){
         long result = database.delete(FeedEntry.TABLE_NAME,"id=?",new String[]{id});
+        database.close();
         if (result == -1)
         {
             ToastMessage.message(context,"Item not deleted");

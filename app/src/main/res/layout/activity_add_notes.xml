@@ -7,40 +7,50 @@
     android:layout_margin="10dp"
     tools:context=".Activity.AddNotesActivity">
 
-    <EditText
-        android:id="@+id/noteTitle"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@drawable/rectacgle2"
-        android:hint="Note Title"
-        android:fontFamily="serif"
-        android:inputType="text"
-        android:maxLines="1"
-        android:textColor="@color/black"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/saveBtn"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/noteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/rectacgle2"
+                android:hint="Note Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:fontFamily="serif"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="#BFB3B3"
-        android:layout_below="@+id/noteTitle"/>
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteTitle"
+                android:layout_margin="10dp"
+                android:background="@drawable/rectacgle2"
+                android:fontFamily="serif"
+                android:hint="Write your Note "
+                android:textSize="18sp"
+                android:minHeight="100dp"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/black" />
 
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:fontFamily="serif"
-        android:scrollbars="vertical"
-        android:background="@drawable/rectacgle2"
-        android:inputType="textMultiLine"
-        android:layout_below="@+id/noteTitle"
-        android:hint="Write your Note "
-        android:textColor="@color/black"/>
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
 
     <Button
         android:id="@+id/saveBtn"
